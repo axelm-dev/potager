@@ -40,10 +40,10 @@ public class PlantController {
     }
 
     @GetMapping("/get")
-    public Plant getPlant(@RequestBody Plant plant) throws PlantException {
-        if(plant == null) {
-            throw new PlantException("Plant cannot be null");
-        }
+    public Plant getPlant() throws PlantException {
+        Plant plant = new Plant();
+        plant.setId(1L);
+        plant.setNom("Tomato");
         return service.getPlant(plant);
     }
 
