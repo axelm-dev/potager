@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Cannabis Sativa",
+    "type": "feuille",
+    "variety": "Sour Diesel",
+    "spaceUse": 2500
+  },
+  {
+    "name": "Cannabis Sativa",
+    "type": "feuille",
+    "variety": "OG Kush",
+    "spaceUse": 2600
+  },
+  {
+    "name": "Cannabis Sativa",
+    "type": "feuille",
+    "variety": "Purple Haze",
+    "spaceUse": 2400
+  },
+  {
+    "name": "Cannabis Indica",
+    "type": "feuille",
+    "variety": "Northern Lights",
+    "spaceUse": 2200
+  },
+  {
+    "name": "Cannabis Indica",
+    "type": "feuille",
+    "variety": "Granddaddy Purple",
+    "spaceUse": 2300
+  },
+  {
+    "name": "Cannabis Indica",
+    "type": "feuille",
+    "variety": "Blueberry",
+    "spaceUse": 2100
+  },
+  {
+    "name": "Cannabis Ruderalis",
+    "type": "feuille",
+    "variety": "Autoflower",
+    "spaceUse": 2000
+  },
+  {
+    "name": "Cannabis Hybrid",
+    "type": "feuille",
+    "variety": "Girl Scout Cookies",
+    "spaceUse": 2500
+  },
+  {
+    "name": "Cannabis Hybrid",
+    "type": "feuille",
+    "variety": "White Widow",
+    "spaceUse": 2400
+  },
+  {
+    "name": "Cannabis Hybrid",
+    "type": "feuille",
+    "variety": "Pineapple Express",
+    "spaceUse": 2300
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Golden Teacher",
+    "spaceUse": 100
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "B+",
+    "spaceUse": 110
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Penis Envy",
+    "spaceUse": 120
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Ecuador",
+    "spaceUse": 105
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Mazatapec",
+    "spaceUse": 95
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Cambodian",
+    "spaceUse": 100
+  },
+  {
+    "name": "Psilocybe Azurescens",
+    "type": "champignon",
+    "variety": "Flying Saucers",
+    "spaceUse": 130
+  },
+  {
+    "name": "Psilocybe Cyanescens",
+    "type": "champignon",
+    "variety": "Wavy Caps",
+    "spaceUse": 120
+  },
+  {
+    "name": "Psilocybe Semilanceata",
+    "type": "champignon",
+    "variety": "Liberty Cap",
+    "spaceUse": 115
+  },
+  {
+    "name": "Psilocybe Tampanensis",
+    "type": "champignon",
+    "variety": "Philosopher's Stone",
+    "spaceUse": 125
+  },
+  {
+    "name": "Cannabis Sativa",
+    "type": "feuille",
+    "variety": "Jack Herer",
+    "spaceUse": 2550
+  },
+  {
+    "name": "Cannabis Indica",
+    "type": "feuille",
+    "variety": "G-13",
+    "spaceUse": 2300
+  },
+  {
+    "name": "Cannabis Hybrid",
+    "type": "feuille",
+    "variety": "AK-47",
+    "spaceUse": 2450
+  },
+  {
+    "name": "Cannabis Sativa",
+    "type": "feuille",
+    "variety": "Amnesia Haze",
+    "spaceUse": 2650
+  },
+  {
+    "name": "Cannabis Indica",
+    "type": "feuille",
+    "variety": "LA Confidential",
+    "spaceUse": 2250
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Albino A+",
+    "spaceUse": 110
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Treasure Coast",
+    "spaceUse": 115
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "Fiji",
+    "spaceUse": 105
+  },
+  {
+    "name": "Psilocybe Cubensis",
+    "type": "champignon",
+    "variety": "A+",
+    "spaceUse": 120
+  }
+]

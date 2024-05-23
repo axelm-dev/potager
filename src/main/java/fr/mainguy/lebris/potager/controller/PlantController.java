@@ -42,8 +42,7 @@ public class PlantController {
     @GetMapping("/get")
     public Plant getPlant() throws PlantException {
         Plant plant = new Plant();
-        plant.setId(1L);
-        plant.setNom("Tomato");
+
         return service.getPlant(plant);
     }
 
