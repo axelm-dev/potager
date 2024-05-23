@@ -41,7 +41,7 @@ public class PottageServiceImpl implements PottageService {
 
     @Override
     public List<Pottage> getAllPottage() {
-        return List.of();
+        return (List<Pottage>) repo.findAll();
     }
 
     @Override

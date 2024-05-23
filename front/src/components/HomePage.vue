@@ -40,7 +40,7 @@ export default {
       } else if (type === 'champignon') {
         return mushroomImage;
       }
-      return ''; // Image par défaut si nécessaire
+      return '';
     }
   },
   mounted() {
