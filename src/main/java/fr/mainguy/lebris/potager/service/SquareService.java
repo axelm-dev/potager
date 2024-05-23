@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface SquareService {
 
-    public void createSquare();
+    public void createSquare(Square square);
 
-    public void removeSquare();
+    public void removeSquare(Square square);
 
-    public void updateSquare();
+    public void updateSquare(Square square);
 
-    public void getSquare();
+    public Square getSquare(Square square);
 
     public List<Square> getAllSquare();
 }

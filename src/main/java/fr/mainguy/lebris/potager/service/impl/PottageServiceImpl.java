@@ -2,29 +2,41 @@ package fr.mainguy.lebris.potager.service.impl;
 
 import fr.mainguy.lebris.potager.entity.Plant;
 import fr.mainguy.lebris.potager.entity.Pottage;
+import fr.mainguy.lebris.potager.repository.PottageRepository;
 import fr.mainguy.lebris.potager.service.PottageService;
+import fr.mainguy.lebris.potager.service.exception.PottageException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PottageServiceImpl implements PottageService {
+
+    @Autowired
+    PottageRepository repo;
+
     @Override
-    public void createPottage() {
+    public void createPottage(Pottage pottage) throws PottageException {
+        if(pottage == null) {
+            throw new PottageException("Pottage cannot be null");
+        }
+        repo.save(pottage);
+    }
+
+    @Override
+    public void deletePottage(Pottage pottage) {
 
     }
 
     @Override
-    public void deletePottage() {
+    public void updatePottage(Pottage pottage) {
 
     }
 
     @Override
-    public void updatePottage() {
-
-    }
-
-    @Override
-    public void getPottage() {
-
+    public Pottage getPottage(Pottage pottage) {
+        return repo.findById(pottage.getId()).orElse(null);
     }
 
     @Override
@@ -48,7 +60,7 @@ public class PottageServiceImpl implements PottageService {
     }
 
     @Override
-    public List<Plant> getAllPlantInPottage() {
+    public List<Plant> getAllPlantInPottage(Pottage pottage) {
         return List.of();
     }
 
