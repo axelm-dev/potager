@@ -7,13 +7,13 @@ import java.util.List;
 
 public interface PlantService {
 
-    public void createPlant();
+    public void createPlant(Plant plant);
 
-    public void removePlant();
+    public void removePlant(Plant plant);
 
-    public void updatePlant();
+    public void updatePlant(Plant plant);
 
-    public void getPlant();
+    public Plant getPlant(Plant plant);
 
     public List<Plant> getAllPlant();
 
