@@ -1,15 +1,41 @@
 package fr.mainguy.lebris.potager.service.impl;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.mainguy.lebris.potager.entity.Plant;
 import fr.mainguy.lebris.potager.entity.Pottage;
 import fr.mainguy.lebris.potager.repository.PlantRepository;
 import fr.mainguy.lebris.potager.service.PlantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+
 @Service
 public class PlantServiceImpl implements PlantService {
+
+    private static final String PLANTS_JSON_FILE = "classpath:static/plantes.json";
+
+    @Autowired
+    private ResourceLoader resourceLoader;
+
+    @Override
+    public List<Plant> getAllPlant() {
+        ObjectMapper mapper = new ObjectMapper();
+        TypeReference<List<Plant>> typeReference = new TypeReference<List<Plant>>() {};
+
+        Resource resource = resourceLoader.getResource(PLANTS_JSON_FILE);
+        try (InputStream inputStream = resource.getInputStream()) {
+            return mapper.readValue(inputStream, typeReference);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to read plants.json file", e);
+        }
+    }
 
     @Autowired
     PlantRepository repo;
@@ -34,11 +60,6 @@ public class PlantServiceImpl implements PlantService {
         return repo.findById(plant.getId()).orElse(null);
     }
 
-    @Override
-    public List<Plant> getAllPlant() {
-
-        return (List<Plant>) repo.findAll();
-    }
 
     @Override
     public void addPlantInPottage(Plant plant) {

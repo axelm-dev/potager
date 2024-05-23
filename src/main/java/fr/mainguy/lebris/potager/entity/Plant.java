@@ -18,7 +18,7 @@ public class Plant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nom;
+    private String name;
     private String type;
     private String variety;
     private double spaceUse;
