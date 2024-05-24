@@ -10,6 +10,9 @@
           <li class="nav-item">
             <RouterLink to="/create-potager" class="nav-link">Créer un potager</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/plant/create" class="nav-link">Créer une plante</RouterLink>
+          </li>
         </ul>
       </div>
     </div>
@@ -21,3 +24,9 @@ export default {
   name: 'NavbarComponent'
 }
 </script>
+
+<style scoped>
+.navbar {
+  margin-bottom: 1rem;
+}
+</style>
