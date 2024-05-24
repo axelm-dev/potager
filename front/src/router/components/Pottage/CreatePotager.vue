@@ -56,7 +56,7 @@ export default {
       axios.post('http://localhost:8080/api/pottage/create', this.pottage)
           .then(response => {
             console.log('Potager créé avec succès');
-            this.fetchPottages(); // Mettre à jour la liste des potagers après la création réussie
+            this.fetchPottages();
           })
           .catch(error => {
             console.error('Erreur lors de la création du potager:', error);

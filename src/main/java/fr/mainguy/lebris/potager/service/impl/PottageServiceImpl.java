@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PottageServiceImpl implements PottageService {
@@ -26,12 +27,12 @@ public class PottageServiceImpl implements PottageService {
 
     @Override
     public void deletePottage(Pottage pottage) {
-
+        repo.delete(pottage);
     }
 
     @Override
-    public void updatePottage(Pottage pottage) {
-
+    public void updatePottage(Pottage pottage) throws PottageException {
+            repo.save(pottage);
     }
 
     @Override
