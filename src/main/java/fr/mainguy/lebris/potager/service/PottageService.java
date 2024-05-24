@@ -12,7 +12,7 @@ public interface PottageService {
 
     public void deletePottage(Pottage pottage);
 
-    public void updatePottage(Pottage pottage);
+    public void updatePottage(Pottage pottage) throws PottageException;
 
     public Pottage getPottage(Pottage pottage);
 
@@ -29,4 +29,6 @@ public interface PottageService {
 
 
     public List<Plant> getAllPlantInPottageByTypePlant(String typePlant);
+
+
 }
