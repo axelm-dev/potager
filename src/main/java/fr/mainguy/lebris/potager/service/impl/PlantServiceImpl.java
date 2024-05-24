@@ -30,7 +30,13 @@ public class PlantServiceImpl implements PlantService {
 
         Resource resource = resourceLoader.getResource(PLANTS_JSON_FILE);
         try (InputStream inputStream = resource.getInputStream()) {
-            return mapper.readValue(inputStream, typeReference);
+            List<Plant> plants = mapper.readValue(inputStream, typeReference);
+
+            if (repo.count() == 0) {
+                repo.saveAll(plants);
+            }
+
+            return plants;
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to read plants.json file", e);
@@ -42,17 +48,17 @@ public class PlantServiceImpl implements PlantService {
 
     @Override
     public void createPlant(Plant plant) {
-
+        repo.save(plant);
     }
 
     @Override
     public void removePlant(Plant plant) {
-
+        repo.delete(plant);
     }
 
     @Override
     public void updatePlant(Plant plant) {
-
+        repo.save(plant);
     }
 
     @Override

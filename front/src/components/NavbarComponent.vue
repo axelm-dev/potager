@@ -16,6 +16,9 @@
           <li class="nav-item">
             <RouterLink to="/update-potager" class="nav-link">Mettre à jour un potager</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/plant/create" class="nav-link">Créer une plante</RouterLink>
+          </li>
         </ul>
       </div>
     </div>
@@ -27,3 +30,9 @@ export default {
   name: 'NavbarComponent'
 }
 </script>
+
+<style scoped>
+.navbar {
+  margin-bottom: 1rem;
+}
+</style>
