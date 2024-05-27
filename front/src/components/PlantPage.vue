@@ -17,8 +17,16 @@ onMounted(() => {
         console.error("There was an error!", error);
       });
 });
-function sortedPlantes() {
-  return plantes.value.sort((a, b) => a.type.localeCompare(b.type));
+function sortedPlantes(type) {
+  if (type) {
+    return plantes.value.filter(plante => plante.type === type);
+  } else {
+    return plantes.value.sort((a, b) => a.type.localeCompare(b.type));
+  }
+}
+const type = ref('');
+function allTypes() {
+  return [...new Set(plantes.value.map(plante => plante.type))];
 }
 function getImage(type) {
   if (type === 'feuille') {
@@ -40,12 +48,16 @@ function deletePlante(id) {
         });
   }
 }
+
 </script>
 
 <template>
   <h1>Plantes</h1>
+  <div v-for="typeIndex in allTypes()" class="d-inline-flex">
+    <button @click="type = typeIndex" class="btn btn-primary m-2">{{ typeIndex }}</button>
+  </div>
   <div class="row">
-    <div v-for="plante in sortedPlantes()" :key="plante.name" class="col-md-4 m-4 card-plant shadow">
+    <div v-for="plante in sortedPlantes(type)" :key="plante.name" class="col-md-4 m-4 card-plant shadow">
       <div class="row min-vw-50">
         <img :src="getImage(plante.type)" class="card-img-left img-fluid col-md-6">
         <div class="card-body col-md-6">
