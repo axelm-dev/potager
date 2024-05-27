@@ -4,202 +4,202 @@
     "name": "Cannabis Sativa",
     "type": "feuille",
     "variety": "Sour Diesel",
-    "spaceUse": 2500
+    "space_use": 2500
   },
   {
     "id": 2,
     "name": "Cannabis Sativa",
     "type": "feuille",
     "variety": "OG Kush",
-    "spaceUse": 2600
+    "space_use": 2600
   },
   {
     "id": 3,
     "name": "Cannabis Sativa",
     "type": "feuille",
     "variety": "Purple Haze",
-    "spaceUse": 2400
+    "space_use": 2400
   },
   {
     "id": 4,
     "name": "Cannabis Indica",
     "type": "feuille",
     "variety": "Northern Lights",
-    "spaceUse": 2200
+    "space_use": 2200
   },
   {
     "id": 5,
     "name": "Cannabis Indica",
     "type": "feuille",
     "variety": "Granddaddy Purple",
-    "spaceUse": 2300
+    "space_use": 2300
   },
   {
     "id": 6,
     "name": "Cannabis Indica",
     "type": "feuille",
     "variety": "Blueberry",
-    "spaceUse": 2100
+    "space_use": 2100
   },
   {
     "id": 7,
     "name": "Cannabis Ruderalis",
     "type": "feuille",
     "variety": "Autoflower",
-    "spaceUse": 2000
+    "space_use": 2000
   },
   {
     "id": 8,
     "name": "Cannabis Hybrid",
     "type": "feuille",
     "variety": "Girl Scout Cookies",
-    "spaceUse": 2500
+    "space_use": 2500
   },
   {
     "id": 9,
     "name": "Cannabis Hybrid",
     "type": "feuille",
     "variety": "White Widow",
-    "spaceUse": 2400
+    "space_use": 2400
   },
   {
     "id": 10,
     "name": "Cannabis Hybrid",
     "type": "feuille",
     "variety": "Pineapple Express",
-    "spaceUse": 2300
+    "space_use": 2300
   },
   {
     "id": 11,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Golden Teacher",
-    "spaceUse": 100
+    "space_use": 100
   },
   {
     "id": 12,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "B+",
-    "spaceUse": 110
+    "space_use": 110
   },
   {
     "id": 13,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Penis Envy",
-    "spaceUse": 120
+    "space_use": 120
   },
   {
     "id": 14,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Ecuador",
-    "spaceUse": 105
+    "space_use": 105
   },
   {
     "id": 15,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Mazatapec",
-    "spaceUse": 95
+    "space_use": 95
   },
   {
     "id": 16,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Cambodian",
-    "spaceUse": 100
+    "space_use": 100
   },
   {
     "id": 17,
     "name": "Psilocybe Azurescens",
     "type": "champignon",
     "variety": "Flying Saucers",
-    "spaceUse": 130
+    "space_use": 130
   },
   {
     "id": 18,
     "name": "Psilocybe Cyanescens",
     "type": "champignon",
     "variety": "Wavy Caps",
-    "spaceUse": 120
+    "space_use": 120
   },
   {
     "id": 19,
     "name": "Psilocybe Semilanceata",
     "type": "champignon",
     "variety": "Liberty Cap",
-    "spaceUse": 115
+    "space_use": 115
   },
   {
     "id": 20,
     "name": "Psilocybe Tampanensis",
     "type": "champignon",
     "variety": "Philosopher's Stone",
-    "spaceUse": 125
+    "space_use": 125
   },
   {
     "id": 21,
     "name": "Cannabis Sativa",
     "type": "feuille",
     "variety": "Jack Herer",
-    "spaceUse": 2550
+    "space_use": 2550
   },
   {
     "id": 22,
     "name": "Cannabis Indica",
     "type": "feuille",
     "variety": "G-13",
-    "spaceUse": 2300
+    "space_use": 2300
   },
   {
     "id": 23,
     "name": "Cannabis Hybrid",
     "type": "feuille",
     "variety": "AK-47",
-    "spaceUse": 2450
+    "space_use": 2450
   },
   {
     "id": 24,
     "name": "Cannabis Sativa",
     "type": "feuille",
     "variety": "Amnesia Haze",
-    "spaceUse": 2650
+    "space_use": 2650
   },
   {
     "id": 25,
     "name": "Cannabis Indica",
     "type": "feuille",
     "variety": "LA Confidential",
-    "spaceUse": 2250
+    "space_use": 2250
   },
   {
     "id": 26,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Albino A+",
-    "spaceUse": 110
+    "space_use": 110
   },
   {
     "id": 27,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Treasure Coast",
-    "spaceUse": 115
+    "space_use": 115
   },
   {
     "id": 28,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "Fiji",
-    "spaceUse": 105
+    "space_use": 105
   },
   {
     "id": 29,
     "name": "Psilocybe Cubensis",
     "type": "champignon",
     "variety": "A+",
-    "spaceUse": 120
+    "space_use": 120
   }
 ]

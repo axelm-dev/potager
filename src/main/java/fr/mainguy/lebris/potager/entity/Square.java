@@ -23,8 +23,8 @@ public class Square {
     private Pottage pottage;
 
     private double surface;
-    private String groundType;
-    private String expositionType;
+    private String ground_type;
+    private String exposition_type;
 
     @OneToMany(mappedBy = "square", cascade = CascadeType.ALL)
     private Set<PlantInSquare> plantInSquares;

@@ -53,7 +53,7 @@ function deletePlante(id) {
           <p class="card-text">Type: {{ plante.type }}</p>
           <p class="card-text">Variété: {{ plante.variety }}</p>
           <p class="card-text">Surface occupée: {{ plante.spaceUse }} cm²</p>
-          <router-link :to="`/plant/edit/`+ plante.id" class="btn btn-primary m-1">Modifier</router-link>
+          <router-link :to="`/plant/edit/` + plante.id" class="btn btn-primary m-1">Modifier</router-link>
           <button @click="deletePlante(plante.id)" class="btn btn-danger m-1">Supprimer</button>
         </div>
       </div>
