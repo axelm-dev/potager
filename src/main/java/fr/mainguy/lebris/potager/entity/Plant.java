@@ -21,7 +21,8 @@ public class Plant {
     private String name;
     private String type;
     private String variety;
-    private double spaceUse;
+    @Column(name = "space_use")
+    private double space_use;
 
     @OneToMany(mappedBy = "plant", cascade = CascadeType.ALL)
     private Set<PlantInSquare> plantInSquares;
