@@ -41,7 +41,7 @@ export default {
   },
   created() {
     const planteId = this.$route.params.id;
-    axios.get(`http://localhost:8080/api/plant/${planteId}`)
+    axios.get(`http://localhost:8080/api/plant/get/${planteId}`)
         .then(response => {
           this.plante = response.data;
         })

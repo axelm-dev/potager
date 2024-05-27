@@ -39,11 +39,13 @@ public class PlantController {
         service.updatePlant(plant);
     }
 
-    @GetMapping("/get")
-    public Plant getPlant(Plant plant) throws PlantException {
-        if(plant.getId() == null) {
+    @GetMapping("/get/{id}")
+    public Plant getPlant(@PathVariable Long id) throws PlantException {
+        if (id == null) {
             throw new PlantException("Plant Id cannot be null");
         }
+        Plant plant = new Plant();
+        plant.setId(id);
         return service.getPlant(plant);
     }
 

@@ -34,8 +34,8 @@
 <script setup>
 import {onMounted, ref} from "vue";
 import axios from "axios";
-import cannabisLeafImage from "@/assets/cannabis.jpg";
-import mushroomImage from "@/assets/mushroom.jpg";
+import cannabisLeafImage from "@/assets/cannabis.png";
+import mushroomImage from "@/assets/mushroom.png";
 import EditPlant from "@/router/components/Plant/EditPlant.vue";
 import CreatePlant from "@/router/components/Plant/CreatePlant.vue";
 
@@ -51,8 +51,16 @@ onMounted(() => {
         console.error("There was an error!", error);
       });
 });
-function sortedPlantes() {
-  return plantes.value.sort((a, b) => a.type.localeCompare(b.type));
+function sortedPlantes(type) {
+  if (type) {
+    return plantes.value.filter(plante => plante.type === type);
+  } else {
+    return plantes.value.sort((a, b) => a.type.localeCompare(b.type));
+  }
+}
+const type = ref('');
+function allTypes() {
+  return [...new Set(plantes.value.map(plante => plante.type))];
 }
 function getImage(type) {
   if (type === 'feuille') {
@@ -74,8 +82,8 @@ function deletePlante(id) {
         });
   }
 }
-</script>
 
+</script>
 
 <style scoped>
 .card-container {
@@ -92,5 +100,10 @@ function deletePlante(id) {
 
 .card-content {
   text-align: center;
+}
+.card-plant {
+  padding: 5px;
+  background-color: rgba(192, 192, 192, 0.4);
+  border-radius: 10px;
 }
 </style>

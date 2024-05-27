@@ -23,6 +23,7 @@ public class PottageController {
         if(pottage == null) {
             throw new PottageException("Pottage cannot be null");
         }
+        System.out.println("Pottage created (controller) " + pottage.toString());
         service.createPottage(pottage);
     }
 
@@ -31,6 +32,7 @@ public class PottageController {
         if(pottage == null) {
             throw new PottageException("Pottage cannot be null");
         }
+        System.out.println("Pottage removed (controller) " + pottage.toString());
         service.deletePottage(pottage);
     }
 
@@ -39,6 +41,7 @@ public class PottageController {
         if(pottage == null) {
             throw new PottageException("Pottage cannot be null");
         }
+        System.out.println("Pottage updated (controller) " + pottage.toString());
         service.updatePottage(pottage);
     }
 

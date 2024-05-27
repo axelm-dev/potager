@@ -22,16 +22,19 @@ public class PottageServiceImpl implements PottageService {
         if(pottage == null) {
             throw new PottageException("Pottage cannot be null");
         }
+        System.out.println("Pottage created (service) " + pottage.toString());
         repo.save(pottage);
     }
 
     @Override
     public void deletePottage(Pottage pottage) {
+        System.out.println("Pottage deleted (service) " + pottage.toString());
         repo.delete(pottage);
     }
 
     @Override
     public void updatePottage(Pottage pottage) throws PottageException {
+            System.out.println("Pottage updated (service) " + pottage.toString());
             repo.save(pottage);
     }
 

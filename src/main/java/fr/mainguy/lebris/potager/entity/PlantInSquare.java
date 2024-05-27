@@ -27,6 +27,6 @@ public class PlantInSquare {
     private Plant plant;
 
     private int quantity;
-    private LocalDate plantDate;
-    private LocalDate harvestDate;
+    private LocalDate plant_date;
+    private LocalDate harvest_date;
 }
