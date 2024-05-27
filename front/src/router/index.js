@@ -1,7 +1,6 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
-import CreatePotager from "@/router/components/Pottage/CreatePotager.vue";
 import DeletePotager from "@/router/components/Pottage/DeletePotager.vue";
-import CreatePotager from "@/router/components/CreatePotager.vue";
+import CreatePotager from "@/router/components/Pottage/CreatePotager.vue";
 import CreatePlant from "@/router/components/Plant/CreatePlant.vue";
 import EditPlant from "@/router/components/Plant/EditPlant.vue";
 import DeletePlant from "@/router/components/Plant/DeletePlant.vue";

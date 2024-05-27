@@ -1,8 +1,8 @@
 <script setup>
 import {onMounted, ref} from "vue";
 import axios from "axios";
-import cannabisLeafImage from "@/assets/cannabis.jpg";
-import mushroomImage from "@/assets/mushroom.jpg";
+import cannabisLeafImage from "@/assets/cannabis.png";
+import mushroomImage from "@/assets/mushroom.png";
 import EditPlant from "@/router/components/Plant/EditPlant.vue";
 
 // Initialiser variable plantes
@@ -45,7 +45,7 @@ function deletePlante(id) {
 <template>
   <h1>Plantes</h1>
   <div class="row">
-    <div v-for="plante in sortedPlantes()" :key="plante.name" class="col-md-4 m-4">
+    <div v-for="plante in sortedPlantes()" :key="plante.name" class="col-md-4 m-4 card-plant shadow">
       <div class="row min-vw-50">
         <img :src="getImage(plante.type)" class="card-img-left img-fluid col-md-6">
         <div class="card-body col-md-6">
@@ -76,5 +76,10 @@ function deletePlante(id) {
 
 .card-content {
   text-align: center;
+}
+.card-plant {
+  padding: 5px;
+  background-color: rgba(192, 192, 192, 0.4);
+  border-radius: 10px;
 }
 </style>
