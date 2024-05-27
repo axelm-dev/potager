@@ -8,16 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/create-potager" class="nav-link">Créer un potager</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/delete-potager" class="nav-link">Supprimer un potager</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/update-potager" class="nav-link">Mettre à jour un potager</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/plant/create" class="nav-link">Créer une plante</RouterLink>
+            <RouterLink to="/pottage/page" class="nav-link">Mes potagers</RouterLink>
           </li>
         </ul>
       </div>
