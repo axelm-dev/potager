@@ -1,9 +1,47 @@
+<template>
+  <h1>Plantes</h1>
+  <div v-for="typeIndex in allTypes()" class="d-inline-flex">
+    <button @click="type = typeIndex" class="btn btn-primary m-2">{{ typeIndex }}</button>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="row">
+        <div v-for="plante in sortedPlantes(type)" :key="plante.name" class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="row no-gutters">
+              <div class="col-md-6">
+                <img :src="getImage(plante.type)" class="card-img img-fluid">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">{{ plante.name }}</h5>
+                  <p class="card-text">Type: {{ plante.type }}</p>
+                  <p class="card-text">Variété: {{ plante.variety }}</p>
+                  <p class="card-text">Surface occupée: {{ plante.spaceUse }} cm²</p>
+                  <router-link :to="`/plant/edit/` + plante.id" class="btn btn-primary m-1">Modifier</router-link>
+                  <router-link :to="`/plant/show/` +  plante.id" class="btn btn-info m-1">Afficher</router-link>
+                  <button @click="deletePlante(plante.id)" class="btn btn-danger m-1">Supprimer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <CreatePlant/>
+    </div>
+  </div>
+</template>
+
+
 <script setup>
 import {onMounted, ref} from "vue";
 import axios from "axios";
 import cannabisLeafImage from "@/assets/cannabis.png";
 import mushroomImage from "@/assets/mushroom.png";
 import EditPlant from "@/router/components/Plant/EditPlant.vue";
+import CreatePlant from "@/router/components/Plant/CreatePlant.vue";
 
 // Initialiser variable plantes
 const plantes = ref([]);
@@ -51,29 +89,6 @@ function deletePlante(id) {
 }
 
 </script>
-
-<template>
-  <h1>Plantes</h1>
-  <div v-for="typeIndex in allTypes()" class="d-inline-flex">
-    <button @click="type = typeIndex" class="btn btn-primary m-2">{{ typeIndex }}</button>
-  </div>
-  <div class="row">
-    <div v-for="plante in sortedPlantes(type)" :key="plante.name" class="col-md-4 m-4 card-plant shadow">
-      <div class="row min-vw-50">
-        <img :src="getImage(plante.type)" class="card-img-left img-fluid col-md-6">
-        <div class="card-body col-md-6">
-          <h5 class="card-title">{{ plante.name }}</h5>
-          <p class="card-text">Type: {{ plante.type }}</p>
-          <p class="card-text">Variété: {{ plante.variety }}</p>
-          <p class="card-text">Surface occupée: {{ plante.spaceUse }} cm²</p>
-          <router-link :to="`/plant/edit/` + plante.id" class="btn btn-primary m-1">Modifier</router-link>
-          <router-link :to="`/plant/show/` +  plante.id" class="btn btn-info m-1">Afficher</router-link>
-          <button @click="deletePlante(plante.id)" class="btn btn-danger m-1">Supprimer</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .card-container {

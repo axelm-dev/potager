@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
         <PlantPage/>
   </div>
 </template>
