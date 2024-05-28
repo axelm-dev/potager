@@ -1,6 +1,9 @@
 package fr.mainguy.lebris.potager.entity;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -22,7 +25,8 @@ public class Plant {
     private String type;
     private String variety;
     @Column(name = "space_use")
-    private double space_use;
+    private double spaceUse;
+
 
     @OneToMany(mappedBy = "plant", cascade = CascadeType.ALL)
     private Set<PlantInSquare> plantInSquares;

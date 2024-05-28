@@ -19,6 +19,9 @@
           <li class="nav-item">
             <RouterLink to="/plant/create" class="nav-link">Créer une plante</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/actions" class="nav-link">Actions</RouterLink>
+          </li>
         </ul>
       </div>
     </div>

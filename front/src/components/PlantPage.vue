@@ -18,7 +18,7 @@ onMounted(() => {
       });
 });
 function sortedPlantes(type) {
-  if (type) {
+  if (type && type !== 'Tout') {
     return plantes.value.filter(plante => plante.type === type);
   } else {
     return plantes.value.sort((a, b) => a.type.localeCompare(b.type));
@@ -26,7 +26,8 @@ function sortedPlantes(type) {
 }
 const type = ref('');
 function allTypes() {
-  return [...new Set(plantes.value.map(plante => plante.type))];
+  // rajouter un bouton tout pour afficher toutes les plantes avec le texte "Tout"
+  return ['Tout', ...new Set(plantes.value.map(plante => plante.type))];
 }
 function getImage(type) {
   if (type === 'feuille') {
@@ -66,6 +67,7 @@ function deletePlante(id) {
           <p class="card-text">Variété: {{ plante.variety }}</p>
           <p class="card-text">Surface occupée: {{ plante.spaceUse }} cm²</p>
           <router-link :to="`/plant/edit/` + plante.id" class="btn btn-primary m-1">Modifier</router-link>
+          <router-link :to="`/plant/show/` +  plante.id" class="btn btn-info m-1">Afficher</router-link>
           <button @click="deletePlante(plante.id)" class="btn btn-danger m-1">Supprimer</button>
         </div>
       </div>

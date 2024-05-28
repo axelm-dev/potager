@@ -4,6 +4,8 @@ import fr.mainguy.lebris.potager.entity.Plant;
 import fr.mainguy.lebris.potager.service.PlantService;
 import fr.mainguy.lebris.potager.service.exception.PlantException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,42 +18,47 @@ public class PlantController {
     PlantService service;
 
     @PostMapping("/create")
-    public void createPlant(@RequestBody Plant plant) throws PlantException {
+    public ResponseEntity<Plant> createPlant(@RequestBody Plant plant) throws PlantException {
         if(plant == null) {
             throw new PlantException("Plant cannot be null");
         }
         service.createPlant(plant);
+        return ResponseEntity.ok(plant);
     }
 
-    @PostMapping("/remove")
-    public void removePlant(@RequestBody Plant plant) throws PlantException {
-        if(plant == null) {
-            throw new PlantException("Plant cannot be null");
+    @DeleteMapping("/remove/{id}")
+    public ResponseEntity<Plant> removePlant(@RequestBody Plant plant) throws PlantException {
+        if(getPlant(plant.getId()).equals(HttpStatus.NOT_FOUND)) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         service.removePlant(plant);
+        return ResponseEntity.ok(plant);
     }
 
-    @PostMapping("/update")
-    public void updatePlant(@RequestBody Plant plant) throws PlantException {
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Plant> updatePlant(@RequestBody Plant plant) throws PlantException {
         if(plant == null) {
             throw new PlantException("Plant cannot be null");
         }
         service.updatePlant(plant);
+        return ResponseEntity.ok(plant);
     }
 
     @GetMapping("/get/{id}")
-    public Plant getPlant(@PathVariable Long id) throws PlantException {
+    public ResponseEntity<Plant> getPlant(@PathVariable Long id) throws PlantException {
         if (id == null) {
             throw new PlantException("Plant Id cannot be null");
         }
-        Plant plant = new Plant();
-        plant.setId(id);
-        return service.getPlant(plant);
+        if(service.getPlant(id) == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(service.getPlant(id));
     }
 
+
     @GetMapping("/getAll")
-    public List<Plant> getAllPlant() {
-        return service.getAllPlant();
+    public ResponseEntity<List<Plant>> getAllPlant() {
+        return ResponseEntity.ok(service.getAllPlant());
     }
 
 }

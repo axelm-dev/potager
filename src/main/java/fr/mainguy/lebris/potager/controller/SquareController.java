@@ -26,7 +26,7 @@ public class SquareController {
         service.createSquare(square);
     }
 
-    @PostMapping("/remove")
+    @PostMapping("/remove/{id}")
     public void removeSquare(@RequestBody Square square) throws SquareException {
         if(square == null) {
             throw new SquareException("Square cannot be null");
@@ -34,7 +34,7 @@ public class SquareController {
         service.removeSquare(square);
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update/{id}")
     public void updateSquare(@RequestBody Square square) throws SquareException {
         if(square == null) {
             throw new SquareException("Square cannot be null");
@@ -42,7 +42,7 @@ public class SquareController {
         service.updateSquare(square);
     }
 
-    @PostMapping("/get")
+    @PostMapping("/get/{id}")
     public Square getSquare(@RequestBody Square square) throws SquareException {
         if(square == null) {
             throw new SquareException("Square cannot be null");

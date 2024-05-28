@@ -13,7 +13,7 @@ public interface PlantService {
 
     public void updatePlant(Plant plant);
 
-    public Plant getPlant(Plant plant);
+    public Plant getPlant(Long id);
 
     public List<Plant> getAllPlant();
 

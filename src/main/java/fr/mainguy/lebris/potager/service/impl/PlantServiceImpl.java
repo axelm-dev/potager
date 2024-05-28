@@ -23,8 +23,7 @@ public class PlantServiceImpl implements PlantService {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    @Override
-    public List<Plant> getAllPlant() {
+    private void init() {
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<List<Plant>> typeReference = new TypeReference<List<Plant>>() {};
 
@@ -36,11 +35,18 @@ public class PlantServiceImpl implements PlantService {
                 repo.saveAll(plants);
             }
 
-            return plants;
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to read plants.json file", e);
         }
+    }
+
+    @Override
+    public List<Plant> getAllPlant() {
+        if (repo.count() == 0) {
+            init();
+        }
+        return (List<Plant>) repo.findAll();
     }
 
     @Autowired
@@ -62,8 +68,8 @@ public class PlantServiceImpl implements PlantService {
     }
 
     @Override
-    public Plant getPlant(Plant plant) {
-        return repo.findById(plant.getId()).orElse(null);
+    public Plant getPlant(Long id) {
+        return repo.findById(id).orElse(null);
     }
 
 

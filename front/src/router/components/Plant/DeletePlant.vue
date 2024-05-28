@@ -51,7 +51,7 @@ export default {
   methods: {
     deletePlante() {
       const planteId = this.$route.params.id;
-      axios.delete(`http://localhost:8080/api/plant/delete/${planteId}`)
+      axios.delete(`http://localhost:8080/api/plant/remove/${planteId}`)
           .then(response => {
             alert('Plante supprimée avec succès!');
             this.$router.push('/');
